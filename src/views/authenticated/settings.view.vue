@@ -4,25 +4,7 @@ import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import { doc, getDoc, setDoc } from 'firebase/firestore'
 import { db } from '@/config/firebaseConfig'
 
-
 const isDark = ref(false)
-
-const toggleDark = () => {
-  isDark.value = !isDark.value
-  document.documentElement.classList.toggle('dark', isDark.value)
-}
-
-// keep preference in localStorage
-onMounted(() => {
-  if (localStorage.getItem('theme') === 'dark') {
-    isDark.value = true
-    document.documentElement.classList.add('dark')
-  }
-})
-
-watch(isDark, (val) => {
-  localStorage.setItem('theme', val ? 'dark' : 'light')
-})
 
 // Refs for settings
 const darkMode = ref(false)
@@ -34,10 +16,8 @@ const deactivateAccount = ref(false)
 
 const saveLoading = ref(false)
 
-
 const languages = ['en', 'es', 'fr', 'de']
 const statuses = ['online', 'away', 'busy', 'offline']
-
 
 const auth = getAuth()
 const userId = ref(null)
@@ -59,7 +39,6 @@ const getSettingsById = async (uid) => {
   }
 }
 
-
 onAuthStateChanged(auth, async (user) => {
   if (user) {
     userId.value = user.uid
@@ -71,12 +50,23 @@ onAuthStateChanged(auth, async (user) => {
       activeStatus.value = setting.activeStatus ?? 'online'
       muteNotifications.value = setting.isNotificationMuted ?? false
       deactivateAccount.value = setting.isAccountDeact ?? false
+      
+     
+      isDark.value = setting.isDarkMode
+      document.documentElement.classList.toggle('dark', setting.isDarkMode)
+
+      console.log("file running setting")
     }
   }
   isLoading.value = false
 })
 
+
 watch([darkMode, language, localProfile, activeStatus, muteNotifications, deactivateAccount], async () => {
+ 
+  isDark.value = darkMode.value
+  document.documentElement.classList.toggle('dark', darkMode.value)
+  
   if (!userId.value) {
     console.warn('User not logged in')
     return
@@ -100,12 +90,6 @@ watch([darkMode, language, localProfile, activeStatus, muteNotifications, deacti
     console.log('Failed to save settings.')
   }
 })
-
-
-watch(darkMode, async () => {
-toggleDark()
-})
-
 </script>
 
 <template>
