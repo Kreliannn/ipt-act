@@ -41,7 +41,7 @@ function setReaction(type) {
 </script>
 
 <template>
-    <div class="bg-white rounded-lg shadow overflow-hidden max-w-5xl">
+    <div class="bg-white rounded-lg shadow overflow-hidden max-w-2xl dark:bg-gray-800 dark:text-white">
         <!-- Header -->
         <div class="p-4 flex items-start space-x-3">
             <img
@@ -54,7 +54,7 @@ function setReaction(type) {
                     <div>
                         <h4
                             @click="$emit('visitProfile', post.uid)"
-                            class="font-semibold text-gray-800 cursor-pointer hover:underline"
+                            class="font-semibold text-gray-800 cursor-pointer hover:underline  dark:text-white"
                         >
                             {{
                                 post?.user?.firstName || post?.user?.lastName
@@ -62,7 +62,7 @@ function setReaction(type) {
                                     : post.email
                             }}
                         </h4>
-                        <span class="text-sm text-gray-500">
+                        <span class="text-sm text-gray-500  dark:text-white">
                             Posted
                             {{
                                 formatDistanceToNow(post.createdAt?.toDate?.() || new Date(), {
@@ -76,20 +76,20 @@ function setReaction(type) {
                     </button>
                 </div>
                 <!-- Content -->
-                <p class="mt-2 text-gray-700">
+                <p class="mt-2 text-gray-700  dark:text-white">
                     {{ post.content }}
                 </p>
 
                 <!-- Reactions / Actions -->
                 <div class="mt-4 flex items-center space-x-6 text-gray-600">
                     <!-- Reaction -->
-                    <div class="relative group">
+                    <div class="relative group  dark:text-white">
                         <button class="flex items-center hover:text-indigo-600">
                             <span v-if="userReaction" class="mr-1">
                                 {{ reactionTypes.find((r) => r.type === userReaction)?.label }}
                             </span>
                             <span>{{ userReaction || 'React' }}</span>
-                            <span class="ml-1"> (1) </span>
+                            <span class="ml-1 "> (1) </span>
                         </button>
 
                         <!-- Picker -->
@@ -109,12 +109,12 @@ function setReaction(type) {
                     </div>
 
                     <!-- Comment -->
-                    <button class="flex items-center hover:text-indigo-600">
+                    <button class="flex items-center hover:text-indigo-600  dark:text-white">
                         💬 Comment ({{ post.comments?.length || 0 }})
                     </button>
 
                     <!-- Share -->
-                    <button class="flex items-center hover:text-indigo-600">🔗 Share</button>
+                    <button class="flex items-center hover:text-indigo-600  dark:text-white">🔗 Share</button>
                 </div>
             </div>
         </div>

@@ -2,11 +2,11 @@
 import { svgIcons } from '@/utils/svgIcons'
 </script>
 <template>
-    <aside class="hidden lg:block lg:w-64 bg-white border-r px-4 py-6 space-y-8">
-        <div>
+    <aside class="hidden lg:block lg:w-64 bg-white border-r px-4 py-6 space-y-8  dark:bg-gray-800 dark:text-white">
+        <div class=""> 
             <h3 class="text-lg font-semibold mb-4">Navigation</h3>
             <nav class="space-y-2">
-                <router-link to="/" class="flex items-center text-indigo-600 font-medium">
+                <router-link to="/" class="flex items-center text-indigo-600 font-medium  dark:text-white">
                     <svg
                         class="w-5 h-5 mr-2"
                         fill="none"
@@ -24,7 +24,7 @@ import { svgIcons } from '@/utils/svgIcons'
                 </router-link>
                 <router-link
                     to="/communities"
-                    class="flex items-center text-gray-600 hover:text-indigo-600"
+                    class="flex items-center text-gray-600  dark:text-white hover:text-indigo-600"
                 >
                     <svg
                         class="w-5 h-5 mr-2"
@@ -43,7 +43,7 @@ import { svgIcons } from '@/utils/svgIcons'
                 </router-link>
                 <router-link
                     to="/page-not-found"
-                    class="flex items-center text-gray-600 hover:text-indigo-600"
+                    class="flex items-center text-gray-600  dark:text-white hover:text-indigo-600"
                 >
                     <svg
                         class="w-5 h-5 mr-2"
@@ -62,7 +62,7 @@ import { svgIcons } from '@/utils/svgIcons'
                 </router-link>
                 <router-link
                     to="/page-not-found"
-                    class="flex items-center text-gray-600 hover:text-indigo-600"
+                    class="flex items-center text-gray-600  dark:text-white hover:text-indigo-600"
                 >
                     <svg
                         class="w-5 h-5 mr-2"
@@ -81,7 +81,7 @@ import { svgIcons } from '@/utils/svgIcons'
                 </router-link>
                 <router-link
                     to="/page-not-found"
-                    class="flex items-center text-gray-600 hover:text-indigo-600"
+                    class="flex items-center text-gray-600  dark:text-white hover:text-indigo-600"
                 >
                     <svg
                         class="w-5 h-5 mr-2"
@@ -100,7 +100,7 @@ import { svgIcons } from '@/utils/svgIcons'
                 </router-link>
                 <router-link
                     to="/profile"
-                    class="flex items-center text-gray-600 hover:text-indigo-600"
+                    class="flex items-center text-gray-600  dark:text-white hover:text-indigo-600"
                 >
                     <span v-html="svgIcons.profile(24, 24)" class="mr-1"></span>
                     Profile
@@ -117,7 +117,7 @@ import { svgIcons } from '@/utils/svgIcons'
                             class="w-8 h-8 flex items-center justify-center bg-indigo-100 text-indigo-600 rounded-full text-sm font-semibold"
                             >CS</span
                         >
-                        <span class="text-gray-700">Computer Science</span>
+                        <span class="text-gray-700  dark:text-white">Computer Science</span>
                     </div>
                     <button class="text-xs text-indigo-600 hover:underline">Join</button>
                 </li>
@@ -127,7 +127,7 @@ import { svgIcons } from '@/utils/svgIcons'
                             class="w-8 h-8 flex items-center justify-center bg-indigo-100 text-indigo-600 rounded-full text-sm font-semibold"
                             >Math</span
                         >
-                        <span class="text-gray-700">Mathematics</span>
+                        <span class="text-gray-700  dark:text-white">Mathematics</span>
                     </div>
                     <button class="text-xs text-indigo-600 hover:underline">Join</button>
                 </li>
@@ -137,7 +137,7 @@ import { svgIcons } from '@/utils/svgIcons'
                             class="w-8 h-8 flex items-center justify-center bg-indigo-100 text-indigo-600 rounded-full text-sm font-semibold"
                             >Bio</span
                         >
-                        <span class="text-gray-700">Biology Club</span>
+                        <span class="text-gray-700  dark:text-white">Biology Club</span>
                     </div>
                     <button class="text-xs text-indigo-600 hover:underline">Join</button>
                 </li>
@@ -147,7 +147,7 @@ import { svgIcons } from '@/utils/svgIcons'
                             class="w-8 h-8 flex items-center justify-center bg-indigo-100 text-indigo-600 rounded-full text-sm font-semibold"
                             >Art</span
                         >
-                        <span class="text-gray-700">Arts Society</span>
+                        <span class="text-gray-700  dark:text-white">Arts Society</span>
                     </div>
                     <button class="text-xs text-indigo-600 hover:underline">Join</button>
                 </li>

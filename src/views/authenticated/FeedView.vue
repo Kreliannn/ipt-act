@@ -119,7 +119,7 @@ onMounted(() => {
 })
 </script>
 <template>
-    <div class="bg-white rounded-lg shadow p-4">
+    <div class="bg-white rounded-lg shadow p-4   dark:bg-gray-800">
         <div class="flex space-x-4">
             <img
                 src="https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?auto=format&fit=facearea&facepad=3&w=64&h=64&q=80"
@@ -134,7 +134,7 @@ onMounted(() => {
             ></textarea>
         </div>
         <div class="mt-3 flex justify-end space-x-3">
-            <button class="flex items-center text-gray-600 hover:text-indigo-600">
+            <button class="flex items-center text-gray-600 hover:text-indigo-600 dark:text-white ">
                 <svg
                     class="w-5 h-5 mr-1"
                     fill="none"
@@ -150,7 +150,7 @@ onMounted(() => {
                 </svg>
                 Photo/Video
             </button>
-            <button class="flex items-center text-gray-600 hover:text-indigo-600">
+            <button class="flex items-center text-gray-600 hover:text-indigo-600 dark:text-white ">
                 <svg
                     class="w-5 h-5 mr-1"
                     fill="none"
@@ -184,13 +184,13 @@ onMounted(() => {
         <div ref="loadMoreTrigger" class="h-2"></div>
     </div>
     <!-- Assignments -->
-    <section class="bg-white rounded-lg shadow p-4">
-        <h3 class="text-lg font-semibold mb-4">Assignments</h3>
+    <section class="bg-white rounded-lg shadow p-4  dark:text-white  dark:bg-gray-800">
+        <h3 class="text-lg font-semibold mb-4 ">Assignments</h3>
         <ul class="space-y-3">
             <li class="flex items-center justify-between">
                 <div>
-                    <h4 class="font-medium text-gray-800">Calculus Homework #3</h4>
-                    <p class="text-sm text-gray-500">Due Aug 5, 2025</p>
+                    <h4 class="font-medium text-gray-800 dark:text-white ">Calculus Homework #3</h4>
+                    <p class="text-sm text-gray-500 dark:text-white ">Due Aug 5, 2025</p>
                 </div>
                 <button
                     class="bg-green-500 text-white text-sm px-3 py-1 rounded-md hover:bg-green-600"
@@ -200,8 +200,8 @@ onMounted(() => {
             </li>
             <li class="flex items-center justify-between">
                 <div>
-                    <h4 class="font-medium text-gray-800">Group Project Proposal</h4>
-                    <p class="text-sm text-gray-500">Due Aug 10, 2025</p>
+                    <h4 class="font-medium text-gray-800 dark:text-white ">Group Project Proposal</h4>
+                    <p class="text-sm text-gray-500 dark:text-white ">Due Aug 10, 2025</p>
                 </div>
                 <button
                     class="bg-green-500 text-white text-sm px-3 py-1 rounded-md hover:bg-green-600"
@@ -211,8 +211,8 @@ onMounted(() => {
             </li>
             <li class="flex items-center justify-between">
                 <div>
-                    <h4 class="font-medium text-gray-800">Reading Response</h4>
-                    <p class="text-sm text-gray-500">Due Aug 12, 2025</p>
+                    <h4 class="font-medium text-gray-800 dark:text-white ">Reading Response</h4>
+                    <p class="text-sm text-gray-500 dark:text-white ">Due Aug 12, 2025</p>
                 </div>
                 <button
                     class="bg-green-500 text-white text-sm px-3 py-1 rounded-md hover:bg-green-600"
@@ -223,13 +223,13 @@ onMounted(() => {
         </ul>
     </section>
     <!-- Events -->
-    <section class="bg-white rounded-lg shadow p-4">
+    <section class="bg-white rounded-lg shadow p-4 dark:bg-gray-800">
         <h3 class="text-lg font-semibold mb-4">Upcoming Events</h3>
         <ul class="space-y-3">
             <li class="flex items-center justify-between">
                 <div>
-                    <h4 class="font-medium text-gray-800">Webinar: Career in AI</h4>
-                    <p class="text-sm text-gray-500">Aug 3, 2025 – 3:00 PM</p>
+                    <h4 class="font-medium text-gray-800 dark:text-white ">Webinar: Career in AI</h4>
+                    <p class="text-sm text-gray-500 dark:text-white ">Aug 3, 2025 – 3:00 PM</p>
                 </div>
                 <button
                     class="bg-indigo-600 text-white text-sm px-3 py-1 rounded-md hover:bg-indigo-700"
@@ -239,8 +239,8 @@ onMounted(() => {
             </li>
             <li class="flex items-center justify-between">
                 <div>
-                    <h4 class="font-medium text-gray-800">Study Group Session</h4>
-                    <p class="text-sm text-gray-500">Aug 6, 2025 – 10:00 AM</p>
+                    <h4 class="font-medium text-gray-800 dark:text-white ">Study Group Session</h4>
+                    <p class="text-sm text-gray-500 dark:text-white ">Aug 6, 2025 – 10:00 AM</p>
                 </div>
                 <button
                     class="bg-indigo-600 text-white text-sm px-3 py-1 rounded-md hover:bg-indigo-700"
@@ -250,8 +250,8 @@ onMounted(() => {
             </li>
             <li class="flex items-center justify-between">
                 <div>
-                    <h4 class="font-medium text-gray-800">Hackathon Kickoff</h4>
-                    <p class="text-sm text-gray-500">Aug 15, 2025 – 9:00 AM</p>
+                    <h4 class="font-medium text-gray-800 dark:text-white ">Hackathon Kickoff</h4>
+                    <p class="text-sm text-gray-500 dark:text-white ">Aug 15, 2025 – 9:00 AM</p>
                 </div>
                 <button
                     class="bg-indigo-600 text-white text-sm px-3 py-1 rounded-md hover:bg-indigo-700"

@@ -1,8 +1,8 @@
 <script setup></script>
 <template>
-    <aside class="hidden xl:flex xl:flex-col xl:w-72 border-l bg-white px-4 py-6 space-y-8">
+    <aside class="hidden xl:flex xl:flex-col xl:w-72 border-l bg-white px-4 py-6 space-y-8 dark:bg-gray-800 ">
         <!-- Profile card -->
-        <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+        <div class="bg-gray-50 p-4 rounded-lg shadow-sm dark:bg-gray-900 dark:text-white">
             <div class="flex items-center space-x-3">
                 <img
                     src="https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?auto=format&fit=facearea&facepad=3&w=64&h=64&q=80"
@@ -10,11 +10,11 @@
                     class="w-12 h-12 rounded-full"
                 />
                 <div>
-                    <h4 class="font-semibold text-gray-800">Alex Johnson</h4>
-                    <p class="text-sm text-gray-500">Computer Science, Class of 2026</p>
+                    <h4 class="font-semibold text-gray-800  dark:text-white" >Alex Johnson</h4>
+                    <p class="text-sm text-gray-500  dark:text-white">Computer Science, Class of 2026</p>
                 </div>
             </div>
-            <div class="mt-4 text-gray-600 text-sm leading-snug">
+            <div class="mt-4 text-gray-600 text-sm leading-snug  dark:text-white">
                 Welcome back! Here’s your quick overview: 3 new messages, 2 upcoming deadlines, and
                 1 event today.
             </div>
@@ -32,10 +32,10 @@
             </div>
         </div>
         <!-- Chat section: list & conversation (similar to main template) -->
-        <div class="flex-1 flex flex-col">
+        <div class="flex-1 flex flex-col ">
             <h3 class="text-lg font-semibold mb-4">Chats</h3>
-            <div class="flex-1 overflow-y-auto space-y-3">
-                <div class="flex items-center p-2 rounded-md bg-gray-100 cursor-pointer">
+            <div class="flex-1 overflow-y-auto space-y-3 ">
+                <div class="flex items-center p-2 rounded-md  cursor-pointer dark:bg-gray-900 ">
                     <img
                         src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=facearea&facepad=3&w=64&h=64&q=80"
                         alt="Contact"
@@ -43,13 +43,13 @@
                     />
                     <div class="flex-1">
                         <div class="flex justify-between text-sm">
-                            <span class="font-medium">John Smith</span>
+                            <span class="font-medium dark:text-white" >John Smith</span>
                             <span class="text-gray-500">3m</span>
                         </div>
-                        <p class="text-xs text-gray-600 truncate">Sure, let's meet at 2 PM.</p>
+                        <p class="text-xs text-gray-600 truncate  dark:text-white">Sure, let's meet at 2 PM.</p>
                     </div>
                 </div>
-                <div class="flex items-center p-2 rounded-md hover:bg-gray-100 cursor-pointer">
+                <div class="flex items-center p-2 rounded-md hover:bg-gray-100  dark:bg-gray-900 cursor-pointer">
                     <img
                         src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=facearea&facepad=3&w=64&h=64&q=80"
                         alt="Contact"
@@ -57,15 +57,15 @@
                     />
                     <div class="flex-1">
                         <div class="flex justify-between text-sm">
-                            <span class="font-medium">Emily Chen</span>
+                            <span class="font-medium dark:text-white" >Emily Chen</span>
                             <span class="text-gray-500">1h</span>
                         </div>
-                        <p class="text-xs text-gray-600 truncate">
+                        <p class="text-xs text-gray-600 truncate  dark:text-white">
                             Don't forget our meeting tomorrow.
                         </p>
                     </div>
                 </div>
-                <div class="flex items-center p-2 rounded-md hover:bg-gray-100 cursor-pointer">
+                <div class="flex items-center p-2 rounded-md hover:bg-gray-100  dark:bg-gray-900 cursor-pointer">
                     <img
                         src="https://images.unsplash.com/photo-1500522144261-ea64433bbe27?auto=format&fit=facearea&facepad=3&w=64&h=64&q=80"
                         alt="Contact"
@@ -73,16 +73,16 @@
                     />
                     <div class="flex-1">
                         <div class="flex justify-between text-sm">
-                            <span class="font-medium">Sophia Lee</span>
+                            <span class="font-medium dark:text-white" >Sophia Lee</span>
                             <span class="text-gray-500">2h</span>
                         </div>
-                        <p class="text-xs text-gray-600 truncate">Thanks for sharing the notes!</p>
+                        <p class="text-xs text-gray-600 truncate  dark:text-white">Thanks for sharing the notes!</p>
                     </div>
                 </div>
             </div>
-            <div class="mt-4 bg-gray-50 border rounded-md flex flex-col h-64">
+            <div class="mt-4 bg-gray-50 border rounded-md flex flex-col h-64 dark:bg-gray-900">
                 <div
-                    class="bg-gray-100 px-3 py-2 border-b text-sm font-medium flex justify-between items-center"
+                    class="bg-gray-100 px-3 py-2 border-b text-sm font-medium dark:text-white flex justify-between items-center dark:bg-gray-900"
                 >
                     <span>John Smith</span>
                     <svg
@@ -99,7 +99,7 @@
                         />
                     </svg>
                 </div>
-                <div class="flex-1 p-3 space-y-2 overflow-y-auto">
+                <div class="flex-1 p-3 space-y-2 overflow-y-auto dark:bg-gray-800">
                     <div class="flex">
                         <img
                             src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=facearea&facepad=3&w=64&h=64&q=80"

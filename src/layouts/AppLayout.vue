@@ -4,12 +4,12 @@ import Sidebar from '@/layouts/Sidebar.vue'
 import RightSidebar from '@/layouts/RightSidebar.vue'
 </script>
 <template>
-    <div class="bg-gray-100 text-gray-800 antialiased">
+    <div class="bg-gray-100 text-gray-800 antialiased dark:bg-gray-900">
         <!-- Top Navigation Bar -->
         <Header />
 
         <!-- Layout wrapper -->
-        <div class="pt-16 max-w-7xl mx-auto flex flex-col lg:flex-row">
+        <div class="pt-16 max-w-7xl mx-auto flex flex-col lg:flex-row  ">
             <!-- Left Sidebar -->
             <Sidebar />
             <!-- Main Content Area -->
@@ -18,7 +18,7 @@ import RightSidebar from '@/layouts/RightSidebar.vue'
                 <RouterView />
             </main>
             <!-- Right Sidebar -->
-            <!-- <RightSidebar /> -->
+            <RightSidebar />
         </div>
         <!-- Mobile chat drawer -->
         <div

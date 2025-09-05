@@ -31,8 +31,8 @@ onUnmounted(() => {
 </script>
 <template>
     <!-- Cover & Basic Info -->
-    <div class="bg-white rounded-lg shadow overflow-hidden">
-        <div class="h-40 bg-indigo-600 relative">
+    <div class="bg-white rounded-lg shadow overflow-hidden dark:bg-gray-800">
+        <div class="h-40 bg-indigo-600 relative dark:bg-gray-800">
             <!-- Cover image overlay with gradient for readability -->
             <img
                 src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=80"
@@ -41,7 +41,7 @@ onUnmounted(() => {
             />
             <div class="absolute inset-0 bg-indigo-600 opacity-50"></div>
             <!-- Avatar and name overlay -->
-            <div class="absolute bottom-0 left-0 ml-6 mb-6 flex items-center space-x-4">
+            <div class="absolute bottom-0 left-0 ml-6 mb-6 flex items-center space-x-4 ">
                 <img
                     src="https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?auto=format&fit=facearea&facepad=3&w=64&h=64&q=80"
                     alt="Avatar"
@@ -49,7 +49,7 @@ onUnmounted(() => {
                 />
                 <div class="text-white">
                     <h2 class="text-2xl font-bold"></h2>
-                    <p class="text-sm">
+                    <p class="text-sm dark:text-white">
                         {{ authStore.me?.firstName }} {{ authStore.me?.lastName }} – Class of 2026
                     </p>
                 </div>
@@ -58,7 +58,7 @@ onUnmounted(() => {
         <!-- Profile actions -->
         <div class="p-4 flex justify-between items-center">
             <div>
-                <span class="text-sm text-gray-600">Manila, Philippines</span>
+                <span class="text-sm text-gray-600 dark:text-white">Manila, Philippines</span>
             </div>
             <button
                 @click="openEditProfile"
@@ -69,19 +69,19 @@ onUnmounted(() => {
         </div>
     </div>
     <!-- About Section -->
-    <section class="bg-white rounded-lg shadow p-6">
-        <h3 class="text-lg font-semibold mb-4">About</h3>
-        <p class="text-gray-700 mb-4">{{ authStore.me?.about }}</p>
+    <section class="bg-white rounded-lg shadow p-6 dark:bg-gray-800">
+        <h3 class="text-lg font-semibold mb-4  dark:text-white">About</h3>
+        <p class="text-gray-700 mb-4  dark:text-white">{{ authStore.me?.about }}</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-700">
-            <div><span class="font-medium">Program:</span> {{ authStore.me?.program }}</div>
-            <div><span class="font-medium">Year:</span> Junior (Class of 2026)</div>
-            <div><span class="font-medium">Email:</span> {{ authStore.me?.email }}</div>
-            <div><span class="font-medium">Interests:</span> AI, Robotics, Music</div>
-            <div><span class="font-medium">Skills:</span> Python, C++, React</div>
+            <div class=" dark:text-white"><span class="font-medium  dark:text-white">Program:</span> {{ authStore.me?.program }}</div>
+            <div class=" dark:text-white"><span class="font-medium  dark:text-white">Year:</span> Junior (Class of 2026)</div>
+            <div class=" dark:text-white"><span class="font-medium  dark:text-white">Email:</span> {{ authStore.me?.email }}</div>
+            <div class=" dark:text-white"><span class="font-medium  dark:text-white">Interests:</span> AI, Robotics, Music</div>
+            <div class=" dark:text-white"><span class="font-medium  dark:text-white">Skills:</span> Python, C++, React</div>
         </div>
     </section>
     <!-- Recent Posts -->
-    <section class="bg-white rounded-lg shadow p-6 space-y-6">
+    <section class="bg-white rounded-lg shadow p-6 space-y-6  dark:bg-gray-800">
         <h3 class="text-lg font-semibold">Recent Posts</h3>
         <!-- Post item -->
         <div class="border-t pt-4 first:border-t-0 first:pt-0">
@@ -94,8 +94,8 @@ onUnmounted(() => {
                 <div class="flex-1">
                     <div class="flex items-center justify-between">
                         <div>
-                            <h4 class="font-semibold text-gray-800">Alex Johnson</h4>
-                            <span class="text-sm text-gray-500">Posted 3 days ago</span>
+                            <h4 class="font-semibold text-gray-800  dark:text-white" >Alex Johnson</h4>
+                            <span class="text-sm text-gray-500  dark:text-white">Posted 3 days ago</span>
                         </div>
                         <button class="text-gray-400 hover:text-gray-600">
                             <svg
@@ -111,12 +111,12 @@ onUnmounted(() => {
                             </svg>
                         </button>
                     </div>
-                    <p class="mt-2 text-gray-700">
+                    <p class="mt-2 text-gray-700  dark:text-white" >
                         Just completed building a chatbot using natural language processing! Excited
                         to integrate it into our study group platform.
                     </p>
                     <div class="mt-3 flex space-x-6 text-sm text-gray-600">
-                        <button class="flex items-center hover:text-indigo-600">
+                        <button class="flex items-center hover:text-indigo-600  dark:text-white">
                             <svg
                                 class="w-5 h-5 mr-1"
                                 fill="none"
@@ -132,7 +132,7 @@ onUnmounted(() => {
                             </svg>
                             24 Likes
                         </button>
-                        <button class="flex items-center hover:text-indigo-600">
+                        <button class="flex items-center hover:text-indigo-600  dark:text-white">
                             <svg
                                 class="w-5 h-5 mr-1"
                                 fill="none"
@@ -153,8 +153,8 @@ onUnmounted(() => {
             </div>
         </div>
         <!-- Another Post -->
-        <div class="border-t pt-4">
-            <div class="flex items-start space-x-3">
+        <div class="border-t pt-4 ">
+            <div class="flex items-start space-x-3 ">
                 <img
                     src="https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?auto=format&fit=facearea&facepad=3&w=64&h=64&q=80"
                     alt="Avatar"
@@ -163,8 +163,8 @@ onUnmounted(() => {
                 <div class="flex-1">
                     <div class="flex items-center justify-between">
                         <div>
-                            <h4 class="font-semibold text-gray-800">Alex Johnson</h4>
-                            <span class="text-sm text-gray-500">Posted 1 week ago</span>
+                            <h4 class="font-semibold text-gray-800  dark:text-white">Alex Johnson</h4>
+                            <span class="text-sm text-gray-500  dark:text-white">Posted 1 week ago</span>
                         </div>
                         <button class="text-gray-400 hover:text-gray-600">
                             <svg
@@ -180,12 +180,12 @@ onUnmounted(() => {
                             </svg>
                         </button>
                     </div>
-                    <p class="mt-2 text-gray-700">
+                    <p class="mt-2 text-gray-700  dark:text-white" >
                         Thanks to everyone who came to my workshop on deep learning! It was a great
                         turnout and I hope you all found it useful.
                     </p>
                     <div class="mt-3 flex space-x-6 text-sm text-gray-600">
-                        <button class="flex items-center hover:text-indigo-600">
+                        <button class="flex items-center hover:text-indigo-600  dark:text-white">
                             <svg
                                 class="w-5 h-5 mr-1"
                                 fill="none"
@@ -201,7 +201,7 @@ onUnmounted(() => {
                             </svg>
                             43 Likes
                         </button>
-                        <button class="flex items-center hover:text-indigo-600">
+                        <button class="flex items-center hover:text-indigo-600  dark:text-white">
                             <svg
                                 class="w-5 h-5 mr-1"
                                 fill="none"
@@ -223,8 +223,8 @@ onUnmounted(() => {
         </div>
     </section>
     <!-- Friends Section -->
-    <section class="bg-white rounded-lg shadow p-6">
-        <h3 class="text-lg font-semibold mb-4">Friends</h3>
+    <section class="bg-white rounded-lg shadow p-6  dark:bg-gray-800">
+        <h3 class="text-lg font-semibold mb-4  dark:text-white">Friends</h3>
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             <!-- Friend card -->
             <div class="flex flex-col items-center text-center">
@@ -233,7 +233,7 @@ onUnmounted(() => {
                     alt="Friend avatar"
                     class="w-16 h-16 rounded-full mb-2"
                 />
-                <span class="font-medium text-gray-800">Jane Doe</span>
+                <span class="font-medium  dark:text-white text-gray-800">Jane Doe</span>
                 <span class="text-xs text-gray-500">Biology</span>
             </div>
             <div class="flex flex-col items-center text-center">
@@ -242,7 +242,7 @@ onUnmounted(() => {
                     alt="Friend avatar"
                     class="w-16 h-16 rounded-full mb-2"
                 />
-                <span class="font-medium text-gray-800">John Smith</span>
+                <span class="font-medium  dark:text-white text-gray-800">John Smith</span>
                 <span class="text-xs text-gray-500">Physics</span>
             </div>
             <div class="flex flex-col items-center text-center">
@@ -251,7 +251,7 @@ onUnmounted(() => {
                     alt="Friend avatar"
                     class="w-16 h-16 rounded-full mb-2"
                 />
-                <span class="font-medium text-gray-800">Emily Chen</span>
+                <span class="font-medium  dark:text-white text-gray-800">Emily Chen</span>
                 <span class="text-xs text-gray-500">Mathematics</span>
             </div>
             <div class="flex flex-col items-center text-center">
@@ -260,7 +260,7 @@ onUnmounted(() => {
                     alt="Friend avatar"
                     class="w-16 h-16 rounded-full mb-2"
                 />
-                <span class="font-medium text-gray-800">Sophia Lee</span>
+                <span class="font-medium  dark:text-white text-gray-800">Sophia Lee</span>
                 <span class="text-xs text-gray-500">Economics</span>
             </div>
         </div>
@@ -286,7 +286,7 @@ onUnmounted(() => {
             <!-- Modal Form -->
             <form action="#" class="space-y-4">
                 <div>
-                    <label class="block text-sm font-medium text-gray-700">First Name</label>
+                    <label class="block text-sm font-medium  dark:text-white text-gray-700">First Name</label>
                     <input
                         v-model="userDetailsForm.firstName"
                         type="text"
@@ -294,7 +294,7 @@ onUnmounted(() => {
                     />
                 </div>
                 <div>
-                    <label class="block text-sm font-medium text-gray-700">Last Name</label>
+                    <label class="block text-sm font-medium  dark:text-white text-gray-700">Last Name</label>
                     <input
                         v-model="userDetailsForm.lastName"
                         type="text"
@@ -332,7 +332,7 @@ onUnmounted(() => {
                 </div>
 
                 <div>
-                    <label class="block text-sm font-medium text-gray-700">Email</label>
+                    <label class="block text-sm font-medium  dark:text-white text-gray-700">Email</label>
                     <input
                         v-model="userDetailsForm.email"
                         type="email"
@@ -341,7 +341,7 @@ onUnmounted(() => {
                 </div>
 
                 <div>
-                    <label class="block text-sm font-medium text-gray-700">About Me</label>
+                    <label class="block text-sm font-medium  dark:text-white text-gray-700">About Me</label>
                     <textarea
                         v-model="userDetailsForm.about"
                         class="w-full mt-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"

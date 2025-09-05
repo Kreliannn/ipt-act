@@ -22,7 +22,7 @@ const handleLogout = async () => {
 }
 </script>
 <template>
-    <header class="bg-white border-b border-gray-50 shadow-sm fixed top-0 inset-x-0 z-50">
+    <header class="bg-white border-b border-gray-50 shadow-sm fixed top-0 inset-x-0 z-50 dark:bg-gray-900 dark:text-white">
         <div class="max-w-7xl mx-auto h-16 flex items-center justify-between px-4 sm:px-6 lg:px-8">
             <div class="flex items-center space-x-4">
                 <a href="feed.html" class="text-2xl font-bold text-indigo-600">EduConnect</a>
@@ -35,7 +35,7 @@ const handleLogout = async () => {
                 </div>
             </div>
             <div class="flex items-center space-x-4">
-                <button class="relative text-gray-600 hover:text-indigo-600 focus:outline-none">
+                <button class="relative text-gray-600 hover:text-indigo-600 focus:outline-none dark:text-white">
                     <svg
                         class="w-6 h-6"
                         fill="none"
@@ -81,7 +81,7 @@ const handleLogout = async () => {
                         >2</span
                     >
                 </button>
-                <div class="relative">
+                <div class="relative dark:bg-gray-900 dark:text-white">
                     <button
                         @click="toggleDropdownMenu"
                         id="profile-button"
