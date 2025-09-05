@@ -109,7 +109,7 @@ toggleDark()
 </script>
 
 <template>
-  <div class="min-h-screen  dark:from-gray-900 dark:to-gray-800  dark:text-white  text-gray-900 ">
+  <div class="min-h-screen  dark:from-gray-900 dark:to-gray-800 text-gray-900 dark:text-white">
     <div class="container mx-auto max-w-4xl px-4 py-8">
       
       <div class="mb-8">
